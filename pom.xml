@@ -9,7 +9,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<version.jboss.bpms.mvn>6.0.3-redhat-4</version.jboss.bpms.mvn>
+		<version.jboss.bpms.mvn>6.0.3-redhat-6</version.jboss.bpms.mvn>
 		<version.spring>4.0.5.RELEASE</version.spring>
 
 		<version.compiler.plugin>2.3.1</version.compiler.plugin>
@@ -62,6 +62,11 @@
 			<artifactId>jsf-api</artifactId>
 			<version>2.2.8-02</version>
 		</dependency>
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-impl</artifactId>
+			<version>2.2.8-02</version>
+		</dependency>
 
 		<!-- Application Layer -->
 		<dependency>
@@ -94,7 +99,7 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>4.2.7.SP5-redhat-1</version>
 		</dependency>
-		
+
 		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
