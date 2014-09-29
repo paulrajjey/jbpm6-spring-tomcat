@@ -1,0 +1,226 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.redhat.jbpm6.webapps</groupId>
+  <artifactId>jsf2-spring3-jbpm6-webapp</artifactId>
+  <packaging>war</packaging>
+  <version>1.0</version>
+  <name>Sample BPM6 WebApp with JSF 2 and Spring 3</name>
+  
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!--  jbpm.version>6.0.3-redhat-4</jbpm.version>
+    <drools.version>6.0.3-redhat-4</drools.version-->
+    <jbpm.version>6.1.0.Final</jbpm.version>
+        <drools.version>6.1.0.Final</drools.version>
+        <version.spring>3.2.0.RELEASE</version.spring>
+        <hibernate.version>4.2.0.Final</hibernate.version>
+    <hibernate.core.version>4.2.0.Final</hibernate.core.version>
+    <h2.version>1.3.161</h2.version>
+    <btm.version>2.1.4</btm.version>
+        
+  </properties>
+  
+  <dependencies>
+    <!-- JSF 2 API -->
+	<dependency>
+		<groupId>com.sun.faces</groupId>
+		<artifactId>jsf-api</artifactId>
+		<version>2.2.8-02</version>
+		
+	</dependency>
+	<!-- JSF 2 Implementation -->
+	<dependency>
+		<groupId>com.sun.faces</groupId>
+		<artifactId>jsf-impl</artifactId>
+		<version>2.2.8-02</version>
+	</dependency>
+	<!-- Spring core -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+		<version>3.2.0.RELEASE</version>
+	</dependency>
+ 	<!-- Spring web -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>3.2.0.RELEASE</version>
+	</dependency>
+	 <!-- Spring dependencies -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${version.spring}</version>
+            </dependency>
+            <!--  dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-asm</artifactId>
+                <version>${version.spring}</version>
+            </dependency-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${version.spring}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${version.spring}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${version.spring}</version>
+            </dependency>
+            
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-expression</artifactId>
+                <version>${version.spring}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${version.spring}</version>
+               
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-orm</artifactId>
+                <version>${version.spring}</version>
+            </dependency>
+            <dependency>
+            	<groupId>org.springframework</groupId>
+            	<artifactId>spring-test</artifactId>
+            	<version>${version.spring}</version>
+            
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${version.spring}</version>
+            </dependency>
+            
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${version.spring}</version>
+            </dependency>
+	
+    
+	<!-- jbpm dependency -->
+	
+	<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.6.4</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+		  <groupId>org.jbpm</groupId>
+		  <artifactId>jbpm-flow</artifactId>
+		  <version>${jbpm.version}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.jbpm</groupId>
+		  <artifactId>jbpm-bpmn2</artifactId>
+		  <version>${jbpm.version}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.jbpm</groupId>
+		  <artifactId>jbpm-flow-builder</artifactId>
+		  <version>${jbpm.version}</version>
+		</dependency>
+		<!--  dependency>
+		  <groupId>org.jbpm</groupId>
+		  <artifactId>jbpm-bam</artifactId>
+		  <version>${jbpm.version}</version>
+		</dependency-->
+		
+		<dependency>
+		  <groupId>org.jbpm</groupId>
+		  <artifactId>jbpm-persistence-jpa</artifactId>
+		  <version>${jbpm.version}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.codehaus.btm</groupId>
+		  <artifactId>btm</artifactId>
+		  <version>2.1.3</version>
+		</dependency>
+		<dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      
+      <version>${h2.version}</version>
+    </dependency>
+    <dependency>
+	<groupId>org.kie</groupId>
+	<artifactId>kie-spring</artifactId>
+	<version>6.1.0.Final</version>
+</dependency>
+		<dependency>
+		  <groupId>org.jbpm</groupId>
+		  <artifactId>jbpm-human-task-core</artifactId>
+		  <version>${jbpm.version}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.jbpm</groupId>
+		  <artifactId>jbpm-test</artifactId>
+		  <version>${jbpm.version}</version>
+		</dependency>
+		
+
+    
+    <dependency>
+      <groupId>org.jbpm</groupId>
+      <artifactId>jbpm-human-task-jpa</artifactId>
+       <version>${jbpm.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jbpm</groupId>
+      <artifactId>jbpm-runtime-manager</artifactId>
+      <version>${jbpm.version}</version>
+    </dependency>
+     <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>${hibernate.version}</version>
+     
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>${hibernate.core.version}</version>
+      </dependency>
+      <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>${hibernate.core.version}</version>
+      </dependency>
+     <dependency>
+    <groupId>org.hibernate.javax.persistence</groupId>
+    <artifactId>hibernate-jpa-2.0-api</artifactId>
+    <version>1.0.1.Final</version>
+    </dependency>
+    <dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.21</version>
+		</dependency>
+	<!-- jbpm dependency -->
+	<!--  dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>ˇ‰
+		</dependency-->
+  </dependencies>
+  
+  
+    
+  <build>
+    <finalName>jbpm6web</finalName>
+  </build>
+</project>
