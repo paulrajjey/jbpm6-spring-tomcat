@@ -63,9 +63,9 @@
       <property name="hibernate.show_sql" value="true" />	
       <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
       <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
-      <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/bpms6"/>
-      <property name="hibernate.connection.username" value="root"/>
-      <property name="hibernate.connection.password" value="jeypaulraj"/>
+      <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/jbpmapp"/>
+      <property name="hibernate.connection.username" value="jbpmapp"/>
+      <property name="hibernate.connection.password" value="jbpmapp"/>
       <!--  property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
       <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
       <property name="hibernate.connection.url" value="jdbc:h2:mem:jbpm-db;MVCC=true"/>
