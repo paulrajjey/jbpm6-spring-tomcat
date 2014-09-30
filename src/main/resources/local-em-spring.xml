@@ -37,8 +37,7 @@
     <property name="userGroupCallback" ref="customUserGroupCallback"/>
   </bean>
 
-  <bean id="runtimeManager" class="org.kie.spring.factorybeans.RuntimeManagerFactoryBean" destroy-method="close">
-  <!--bean id="runtimeManager" class="org.kie.spring.factorybeans.RuntimeManagerFactoryBean" -->
+  <bean id="runtimeManager" class="org.kie.spring.factorybeans.FixedRuntimeManagerFactoryBean" destroy-method="close">
     <property name="identifier" value="spring-rm"/>
     <property name="runtimeEnvironment" ref="runtimeEnvironment"/>
     <property name="type" value="PER_PROCESS_INSTANCE"/>
