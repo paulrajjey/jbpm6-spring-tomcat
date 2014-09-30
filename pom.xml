@@ -1,16 +1,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.redhat.jbpm6.webapps</groupId>
-	<artifactId>jsf2-spring3-jbpm6-webapp</artifactId>
+	<artifactId>jsf-spring-jbpm6-webapp</artifactId>
 	<packaging>war</packaging>
 	<version>1.0</version>
-	<name>Sample BPM6 WebApp with JSF 2 and Spring 3</name>
+	<name>Sample BPM6 WebApp with JSF and Spring</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+		<!-- Refer to component details pages for version information -->
+		<!-- https://access.redhat.com/support/configurations/jboss -->
 		<version.jboss.bpms.mvn>6.0.3-redhat-6</version.jboss.bpms.mvn>
-		<version.spring>4.0.5.RELEASE</version.spring>
+		<version.spring>3.1.2.RELEASE</version.spring>
+		<version.hibernate>4.2.7.SP4-redhat-1</version.hibernate>
 
 		<version.compiler.plugin>2.3.1</version.compiler.plugin>
 		<version.war.plugin>2.1.1</version.war.plugin>
@@ -97,7 +100,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>4.2.7.SP5-redhat-1</version>
+			<version>${version.hibernate}</version>
 		</dependency>
 
 		<!-- Logging -->

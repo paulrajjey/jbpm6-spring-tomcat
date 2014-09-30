@@ -8,12 +8,10 @@ import org.kie.api.task.UserGroupCallback;
 public class CustomUserGroupCallback implements UserGroupCallback {
 
 	public boolean existsGroup(String groupId) {
-		// TODO Auto-generated method stub
 		return groupId.equals("PM") || groupId.equals("HR");
 	}
 
 	public boolean existsUser(String userId) {
-		// TODO Auto-generated method stub
 		return userId.equals("jiri") || userId.equals("mary") || userId.equals("Administrator");
 	}
 
